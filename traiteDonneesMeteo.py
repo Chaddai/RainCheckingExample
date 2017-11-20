@@ -23,3 +23,9 @@ def extraireDescription(tranche):
     description du temps en français sur cette tranche"""
 
     return tranche["weather"][0]["description"]
+
+def extraireTimestamp(tranche):
+    """Extrait le timestamp indiquant la fin de la tranche de prévision passée
+    en paramètre"""
+
+    return tranche["dt"]
