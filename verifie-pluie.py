@@ -21,6 +21,6 @@ volumeDePluie = extrairePluie(previsions3h)
 description = extraireDescription(previsions3h)
 
 if volumeDePluie > 0:
-    print("Il va pleuvoir dans les 3h qui viennent à {} ! la description est : {}.".format(ville, description))
+    print("Il va pleuvoir {}mm dans les 3h qui viennent à {} ! la description est : {}.".format(volumeDePluie, ville, description))
 else:
     print("Il ne pleuvra pas dans les 3h qui viennent à {}, la description est : {}.".format(ville, description))
