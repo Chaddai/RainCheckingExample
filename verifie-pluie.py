@@ -1,4 +1,4 @@
-﻿# Programme principal
+﻿# Programme principal : vérifie s'il va pleuvoir dans les 3h dans une ville donnée
 
 import sys # pour lire l'argument du programme en ligne de commande
 
