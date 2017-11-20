@@ -20,7 +20,7 @@ def recupererPrevisions(ville):
     paramètre"""
 
     idVille = trouverID(ville)
-    urlAPI = "http://api.openweathermap.org/data/2.5/forecast?id={}&APPID={}".format(idVille,apiKey)
+    urlAPI = "http://api.openweathermap.org/data/2.5/forecast?id={}&APPID={}&units=metric&lang=fr".format(idVille,apiKey)
 
     previsionsJson = urllib.request.urlopen(urlAPI)
     previsions = json.loads(previsionsJson.read().decode('utf-8'))

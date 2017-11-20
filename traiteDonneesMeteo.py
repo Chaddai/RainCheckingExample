@@ -8,12 +8,18 @@ def extraire3h(previsions, index=0):
 
     return previsions["list"][0]
 
-def extrairePluie(tranchePrevisions):
+def extrairePluie(tranche):
     """Prenant une tranche de 3h de prévisions, cette fonction en extrait la
     hauteur de pluie en mm sur les 3h"""
 
-    if "rain" in tranchePrevisions:
-        return tranchePrevisions["rain"]["3h"]
+    if "rain" in tranche:
+        return tranche["rain"]["3h"]
     else:
         # aucune pluie n'est prévue
         return 0
+
+def extraireDescription(tranche):
+    """Prenant une tranche de 3h de prévisions, cette fonction en extrait la
+    description du temps en français sur cette tranche"""
+
+    return tranche["weather"][0]["description"]
